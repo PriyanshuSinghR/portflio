@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/style.css" />
+    <title>Blogs</title>
+  </head>
+  <body>
+    <nav class="navigation container">
+      <div class="nav-brand">iAmBrand</div>
+      <ul class="list-non-bullet nav-pills">
+        <li class="list-item-inline">
+          <a class="link" href="/">Home</a>
+        </li>
+        <li class="list-item-inline">
+          <a class="link" href="/projects.html">Projects</a>
+        </li>
+        <li class="list-item-inline">
+          <a class="link link-active" href="/about.html">About Me</a>
+        </li>
+      </ul>
+    </nav>
+
+    <header class="hero">
+      <h1 class="hero-heading">
+        About <span class="heading-inverted"> Me</span>
+      </h1>
+      <div class="about-info section ow">
+        <img src="img/profile.jpeg" alt="Priyanshu Singh" class="bio-image" />
+
+        <div class="bio container">
+          <h3>BIO</h3>
+          <p>
+            I am a web developer, with a graduate degree and a passion for
+            making website creative with ReactJS and advance CSS. I working on
+            React in 3 year but still I have to go so far so I always try to
+            learn more and sharp my skill as much as possible. I am pursuing
+            B.Tech(IT) from Galgotias College of Engineering and Technology.
+            When I am not working, I spend my time in fulfilling and relaxing
+            pursuits such as spending time with family, self care, learn
+            psychology, Travelling, playing volleyball. I also like to
+            travel(solo) and connect with people.
+          </p>
+        </div>
+      </div>
+    </header>
+    <section class="container container-center form-section ow">
+      <h3>Contact Us</h3>
+      <div class="container-form">
+        <form
+          action="https://formspree.io/f/xzbwvddg"
+          method="POST"
+          id="my-form"
+        >
+          <div class="form-group">
+            <label for="firstName">Name</label>
+            <input type="text" id="Name" name="Name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="Email" name="Email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="massage">Massage</label>
+            <textarea
+              name="Massage"
+              id="Massage"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <div id="status"></div>
+    </section>
+    <footer class="footer">
+      <div class="footer-header">Social media</div>
+      <ul class="social-links icons list-non-bullet">
+        <li class="list-item-inline">
+          <a class="link" href="https://github.com/PriyanshuSinghR">
+            <i class="fab fa-github fa-2x"></i>
+          </a>
+        </li>
+        <li class="list-item-inline">
+          <a class="link" href="https://twitter.com/Priyanshu844">
+            <i class="fab fa-twitter fa-2x"></i>
+          </a>
+        </li>
+        <li class="list-item-inline">
+          <a
+            class="link"
+            href="https://www.linkedin.com/in/priyanshu-overlord/"
+          >
+            <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+        </li>
+      </ul>
+      <p>Copyright &copy; 2022 Priyanshu Singh • Web Developer</p>
+    </footer>
+
+    <script>
+      var form = document.getElementById('my-form');
+      function success() {
+        let status = document.getElementById('status');
+        status.classList.add('success');
+        status.innerHTML = 'Thanks';
+      }
+
+      function error() {
+        let status = document.getElementById('status');
+        status.classList.add('error');
+        status.innerHTML = 'Oops! There was a problem.';
+      }
+
+      async function handleSubmit(event) {
+        event.preventDefault();
+        var status = document.getElementById('status');
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+            Accept: 'application/json',
+          },
+        })
+          .then((response) => {
+            if (response.ok) {
+              success();
+              form.reset();
+            } else {
+              response.json().then((data) => {
+                error();
+                if (Object.hasOwn(data, 'errors')) {
+                  status.innerHTML = data['errors']
+                    .map((error) => error['message'])
+                    .join(', ');
+                } else {
+                  error();
+                }
+              });
+            }
+          })
+          .catch((error) => {
+            error();
+          });
+      }
+      form.addEventListener('submit', handleSubmit);
+    </script>
+  </body>
+</html>

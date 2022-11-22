@@ -323,7 +323,7 @@ hr {
   padding: 0;
   border: 3rem solid transparent;
   list-style-type: none;
-  counter-reset: a 13;
+  counter-reset: a 14;
 }
 
 .custom-counter li::before {
@@ -357,7 +357,7 @@ hr {
   color: white;
 }
 
-.footer .link :hover {
+.footer-inline :hover {
   color: black;
   /* transition: all 0.3s ease-out; */
 }

@@ -224,6 +224,7 @@ hr {
 .list-item-inline {
   display: inline;
   padding: 0rem 0.5rem;
+  color: black;
 }
 
 /** navigation **/
@@ -269,6 +270,14 @@ hr {
   margin: auto;
 }
 
+.project-head {
+  /* padding-top: 1rem; */
+  margin-left: 2px;
+  border-bottom: 5px solid black;
+  color: var(--dark-gray);
+  width: 20rem;
+}
+
 .hero .hero-heading {
   text-align: center;
   padding-top: 1rem;
@@ -283,6 +292,7 @@ hr {
 
 .section {
   padding: 2rem;
+  margin-bottom: 5rem;
 }
 
 .section h1 {
@@ -292,6 +302,10 @@ hr {
 .center {
   display: block;
   text-align: center;
+}
+
+.center-button {
+  margin: 43%;
 }
 
 .ow {
@@ -318,15 +332,34 @@ hr {
   grid-area: bio;
 }
 
-.custom-counter {
+.custom-counter-1 {
   margin: 0;
   padding: 0;
   border: 3rem solid transparent;
   list-style-type: none;
-  counter-reset: a 14;
+  counter-reset: a 8;
 }
 
-.custom-counter li::before {
+.custom-counter-1 li::before {
+  font-weight: bold;
+  padding: 12px 12px;
+  content: counter(a) '.';
+  counter-increment: a -1;
+  position: absolute;
+  left: 10;
+  color: var(--dark-gray);
+  font-size: 2rem;
+}
+
+.custom-counter-2 {
+  margin: 0;
+  padding: 0;
+  border: 3rem solid transparent;
+  list-style-type: none;
+  counter-reset: a 12;
+}
+
+.custom-counter-2 li::before {
   font-weight: bold;
   padding: 12px 12px;
   content: counter(a) '.';
@@ -368,6 +401,22 @@ hr {
 
 .footer p {
   color: var(--dark-gray);
+}
+
+/** blogs **/
+
+.showcase-blog {
+  padding-bottom: 6rem;
+}
+
+.container-b {
+  padding: 0rem 1rem;
+}
+
+.container-center-b {
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
 }
 
 /* about me */

@@ -419,6 +419,11 @@ hr {
   margin: auto;
 }
 
+article p,
+li {
+  line-height: 25px;
+}
+
 /* about me */
 
 .about-info {

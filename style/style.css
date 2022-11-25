@@ -419,8 +419,11 @@ hr {
   margin: auto;
 }
 
-article p,
-li {
+article p {
+  line-height: 25px;
+}
+
+.blog-li {
   line-height: 25px;
 }
 

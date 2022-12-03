@@ -14,29 +14,35 @@
     <title>About</title>
   </head>
   <body>
-    <nav class="navigation container">
+    <div class="menu-btn">
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+    </div>
+    <nav class="navigation menu">
       <div class="nav-brand">iAmBrand</div>
-      <ul class="list-non-bullet nav-pills">
-        <li class="list-item-inline">
-          <a class="link" href="/">Home</a>
+      <ul class="list-non-bullet nav-pills menu-nav">
+        <li class="list-item-inline nav-item">
+          <a class="link nav-link" href="/">Home</a>
         </li>
-        <li class="list-item-inline">
-          <a class="link" href="/projects.html">Projects</a>
+        <li class="list-item-inline nav-item">
+          <a class="link nav-link" href="/projects.html">Projects</a>
         </li>
-        <li class="list-item-inline">
-          <a class="link" href="/blogs.html">Blogs</a>
+        <li class="list-item-inline nav-item">
+          <a class="link nav-link" href="/blogs.html">Blogs</a>
         </li>
-        <li class="list-item-inline">
-          <a class="link link-active" href="/about.html">About Me</a>
+        <li class="list-item-inline nav-item">
+          <a class="link nav-link current link-active" href="/about.html"
+            >About Me</a
+          >
         </li>
       </ul>
     </nav>
-
     <header class="hero">
       <h1 class="hero-heading">
         About <span class="heading-inverted"> Me</span>
       </h1>
-      <div class="about-info section ow">
+      <div class="about-info center-1 section ow">
         <img src="img/profile.jpeg" alt="Priyanshu Singh" class="bio-image" />
 
         <div class="bio container">
@@ -158,5 +164,6 @@
       }
       form.addEventListener('submit', handleSubmit);
     </script>
+    <script src="main.js"></script>
   </body>
 </html>

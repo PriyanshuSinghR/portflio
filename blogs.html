@@ -19,20 +19,27 @@
     <title>Blogs</title>
   </head>
   <body>
-    <nav class="navigation container">
+    <div class="menu-btn">
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+    </div>
+    <nav class="navigation menu">
       <div class="nav-brand">iAmBrand</div>
-      <ul class="list-non-bullet nav-pills">
-        <li class="list-item-inline">
-          <a class="link" href="/">Home</a>
+      <ul class="list-non-bullet nav-pills menu-nav">
+        <li class="list-item-inline nav-item">
+          <a class="link nav-link" href="/">Home</a>
         </li>
-        <li class="list-item-inline">
-          <a class="link" href="/projects.html">Projects</a>
+        <li class="list-item-inline nav-item">
+          <a class="link nav-link" href="/projects.html">Projects</a>
         </li>
-        <li class="list-item-inline">
-          <a class="link link-active" href="/blogs.html">Blogs</a>
+        <li class="list-item-inline nav-item">
+          <a class="link nav-link current link-active" href="/blogs.html"
+            >Blogs</a
+          >
         </li>
-        <li class="list-item-inline">
-          <a class="link" href="/about.html">About Me</a>
+        <li class="list-item-inline nav-item">
+          <a class="link nav-link" href="/about.html">About Me</a>
         </li>
       </ul>
     </nav>
@@ -43,9 +50,9 @@
       </h1>
     </header>
 
-    <ul class="list-non-bullet container">
+    <ul class="list-non-bullet container blog-container">
       <li>
-        <article class="showcase-list container-b container-center-b">
+        <article class="showcase-list container-center-b">
           <h1>My First Solo Trip</h1>
           <small>24th November, 2022</small>
           <p>
@@ -60,7 +67,7 @@
       </li>
 
       <li>
-        <article class="showcase-list container-b container-center-b">
+        <article class="showcase-list container-center-b">
           <h1>My Journey with React</h1>
           <small>24th November, 2022</small>
           <p>
@@ -94,5 +101,6 @@
       </ul>
       <p>Copyright &copy; 2022 Priyanshu Singh • Web Developer</p>
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>

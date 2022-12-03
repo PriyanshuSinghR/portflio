@@ -701,7 +701,7 @@ hr {
   color: white;
   border-top-right-radius: 1rem;
   border-top-left-radius: 1rem;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .footer-header {
